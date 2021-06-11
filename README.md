@@ -1,0 +1,1 @@
+Estou iniciando o curso da Trybe em junho-21, no intuito de me tornar um Desenvolvedor. Faço parte da Turma 14 - Tribo B. Espero que daqui alguns dias esse ambiente de git e github seja mais familiar pra mim, e tudo fique mais simples (estudarei pra isso). É só o começo!
