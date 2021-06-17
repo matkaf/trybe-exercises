@@ -1,0 +1,52 @@
+/*Arquivo de Estilo CSS*/
+
+
+body{
+    font-size: 16px; 
+    text-transform: lowercase;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 65px;
+    font-family: sans-serif;
+    font-style: oblique;
+    color: orange;
+    background-color: purple;
+    margin: auto;
+    width: fit-content; /* bg respects the text width */
+}
+
+.cor-favorita{
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 3em;
+  text-decoration: orange ;
+  text-align: center;
+}
+
+.list {
+  font-family: monospace;
+  font-size: 2em;
+  text-align: center;      
+  width: fit-content;
+  margin: auto;
+  /* 3 variaveis acima centralizam e dão cor ao bg, respeito a largura do txt */
+      
+}
+
+#amarelo{
+  background: yellow;
+  
+}
+
+#vermelho{
+  background: red;
+ 
+}
+
+#marrom{
+  background: brown;
+  
+}
