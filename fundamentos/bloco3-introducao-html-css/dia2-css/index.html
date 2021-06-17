@@ -3,43 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML</title>
-    <style>
-
-        body{
-            font-size: 16px;
-
-        }
-
-        h1 {
-            text-transform: lowercase;
-            text-align: center;
-            font-size: 65px;
-            font-family: sans-serif;
-            font-style: oblique;
-            color: orange;
-            background-color: purple;
-            margin: auto;
-            width: fit-content; /* bg respects the text width */
-            
-        }
-
-        p {
-            font-weight: 600;
-            font-size: 3em;
-        }
-
-        .list-paragraph{
-            background-color: powderblue;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style></style>
   </head>
   <body>
     <h1>Exercícios 3.2</h1>
-    <p class="list-paragraph">Qual é a sua cor favorita?</p>
-    <ul class="list-paragraph">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+    <p class="cor-favorita">Qual é a sua cor favorita?</p>
+    <ul class="list">
+      <li id="amarelo">Amarelo</li>
+      <li id="vermelho">Vermelho</li>
+      <li id="marrom">Marrom</li>
     </ul>
   </body>
 </html>
