@@ -1,0 +1,30 @@
+ol li {
+    background-color: yellow;
+}
+    ol li:nth-child(odd){
+        text-transform: uppercase;
+    }
+
+    ol li:nth-child(even){
+        color: green;
+    }
+
+li {
+    font-size: 20px;
+}
+    li em {
+        font-weight: bold;
+    }
+
+li:nth-child(-n+3) ul {
+    color: blue;
+}
+
+.h-title {
+    color: red;
+}
+
+.h-title em {
+    font-size: 40px;
+    border: 1px solid black;
+}
