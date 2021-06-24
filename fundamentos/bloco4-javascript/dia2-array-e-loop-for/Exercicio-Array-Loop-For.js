@@ -1,5 +1,5 @@
-// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-// soma = 0;
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+soma = 0;
 
 // Exercicio 1: Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log()
 
@@ -34,8 +34,13 @@
 //   }
 
 // Exercicio 5: Utilizando for , descubra qual o maior valor contido no array e imprima-o
-// numbers.sort(a,b);
-// console.log(numbers[numbers.length-1]);
+// num = 0;
+// for (index = 0; index < numbers.length; index += 1){
+//   if (numbers[index] > num) {
+//     num = numbers[index]; 
+//   }
+// }
+// console.log('O maior número é ' + num);
 
 // Exercicio 6: Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 // contadorImpar = 0;
@@ -53,8 +58,18 @@
 // }
 
 // Exercicio 7: Utilizando for , descubra qual o menor valor contido no array e imprima-o
-// numbers.sort(a,b);
-// console.log(numbers[numbers.length-1]);
+// num = 0;
+// for (index = 0; index < numbers.length; index += 1){
+//   if (numbers[index] > num) {
+//     num = numbers[index]; 
+//   }
+//  for (indexMenor = 0; indexMenor < numbers.length; indexMenor += 1){
+//    if (numbers[indexMenor] < num) {
+//      num = numbers[indexMenor];
+//    }
+//  }
+// }
+// console.log('O menor número é ' + num);
 
 // ------------ NÃO PRECISA MAIS DAS VARIAVEIS NO TOPO ----------------------------
 
