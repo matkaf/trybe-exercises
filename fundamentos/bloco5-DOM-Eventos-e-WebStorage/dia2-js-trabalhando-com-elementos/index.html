@@ -62,6 +62,68 @@
 
       // 2: Adicione a tag div com a classe main-content como filho da tag body ;
       document.body.appendChild(document.createElement('div')).className = 'main-content';
+
+      // 3: Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      document.querySelector('.main-content').appendChild(document.createElement('div')).className = 'center-content';
+
+      // 4:Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      document.querySelector('.center-content').appendChild(document.createElement('p')).innerText = 'Olá, sou um texto filho da div com a classe center-content';
+
+      // 5: Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      document.querySelector('.main-content').appendChild(document.createElement('div')).className = 'left-content';
+
+      // 6: Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+      document.querySelector('.main-content').appendChild(document.createElement('div')).className = 'right-content';
+
+      // 7: Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+      document.querySelector('.left-content').appendChild(document.createElement('img')).className = 'small-image';
+      document.querySelector('.small-image').src = 'https://picsum.photos/200';
+
+      // 8:Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+      let listaUlValores = document.querySelector('.right-content').appendChild(document.createElement('ul')).className = 'numeros-extensos';
+      for (index = 1; index <= 10; index += 1){
+        switch (index) {
+          case 1:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Um';
+            break;
+          case 2:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Dois';
+            break;
+          case 3:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Três';
+            break;
+          case 4:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Quatro';
+            break;
+          case 5: 
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Cinco';
+            break;
+          case 6:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Seis';
+            break;
+          case 7:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Sete';
+            break;
+          case 8:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Oito';
+            break;
+          case 9:
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Nove';
+            break;
+          case 10: 
+            document.querySelector('.numeros-extensos').appendChild(document.createElement('li')).innerHTML = 'Dez';
+            break;
+          default:
+            break;
+        }
+      }
+
+      // 9: Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+        for (let x = 0; x < 3; x += 1){
+          document.querySelector('.main-content').appendChild(document.createElement('h3'));
+      }
+     
+
     </script>
   </body>
 </html>
