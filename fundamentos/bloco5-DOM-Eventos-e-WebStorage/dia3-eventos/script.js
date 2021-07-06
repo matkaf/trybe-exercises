@@ -41,3 +41,14 @@ function createDezDays () {
 createDezDays();
 
 // Exercicio 2:
+function btnFeriado (feriado) {
+  let divButtons = document.querySelector('.buttons-container');
+  let feriadoBtn = document.createElement('button');
+  feriadoBtn.innerHTML = feriado;
+
+  divButtons.appendChild(feriadoBtn).id = 'btn-holiday';
+}
+
+btnFeriado('Feriado');
+
+// Exercicio 3:
