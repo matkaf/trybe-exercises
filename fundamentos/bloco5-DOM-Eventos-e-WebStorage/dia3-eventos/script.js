@@ -57,19 +57,19 @@ let holidaysChange = btnHoliday.addEventListener('click', holidaysBackground);
 
 function holidaysBackground (){
   let holidays = document.querySelectorAll('.holiday');
+
   for (index = 0; index < holidays.length; index += 1){
-    if (holidays[index].backgroundColor = 'rgb(238,238,238)'){
+    if (holidays[index].style.backgroundColor != 'green'){
       holidays[index].style.backgroundColor = 'green';
-      
     } else {
-      holidays[index].style.backgroundColor = 'rgb(238,238,238)';
-      
+      holidays[index].style.backgroundColor = '';      
     }
     
   }
 
 }
 
+// Exercicio 4:
 function fridayButton (txtSexta) {
   let divButtons = document.querySelector('.buttons-container');
   let btnFriday = document.createElement('button');
@@ -78,3 +78,42 @@ function fridayButton (txtSexta) {
 }
 
 fridayButton('Sexta-Feira');
+
+// Exercicio 5:
+
+let fridayChange = document.querySelector('#btn-friday').addEventListener('click', changeFriday)
+let fridayClass = document.querySelectorAll('.friday');
+
+// Recebe os inteiros correspondentes a sexta-feira e guarda
+let numFriday = [];
+for (let i = 0; i < fridayClass.length; i += 1) {
+  numFriday.push(fridayClass[i].innerText);
+}
+
+//Verifica e troca o conteúdo da coluna Sexta-feira
+function changeFriday () {
+  for (let i = 0; i < fridayClass.length; i+= 1){
+    if (fridayClass[i].innerText != 'Sextou!'){
+      fridayClass[i].innerText = 'Sextou!'
+    } else {
+      console.log(numFriday)
+      fridayClass[i].innerText = numFriday[i];
+    }
+  }
+}
+
+// Exercicio 6:
+let liDays = document.querySelectorAll('.day');
+for (let index in liDays) {
+  let liDaysText = liDays[index].innerText;
+  console.log(liDaysText);
+
+function ZoomInOutDays (){
+  for (i = 0; i < liDays.length; i += 1) {
+    if (liDays[i].innerText.style.fontSize != '40px'){
+      liDays[i].innerText.style.fontSize = '40px';
+    } else {
+      liDays[i].innerText.style.fontSize = '20px';
+    }
+  }
+}
