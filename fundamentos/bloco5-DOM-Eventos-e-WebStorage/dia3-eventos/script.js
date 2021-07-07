@@ -52,3 +52,29 @@ function btnFeriado (feriado) {
 btnFeriado('Feriado');
 
 // Exercicio 3:
+let btnHoliday = document.querySelector('#btn-holiday');
+let holidaysChange = btnHoliday.addEventListener('click', holidaysBackground);
+
+function holidaysBackground (){
+  let holidays = document.querySelectorAll('.holiday');
+  for (index = 0; index < holidays.length; index += 1){
+    if (holidays[index].backgroundColor = 'rgb(238,238,238)'){
+      holidays[index].style.backgroundColor = 'green';
+      
+    } else {
+      holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+      
+    }
+    
+  }
+
+}
+
+function fridayButton (txtSexta) {
+  let divButtons = document.querySelector('.buttons-container');
+  let btnFriday = document.createElement('button');
+  btnFriday.id = 'btn-friday';
+  divButtons.appendChild(btnFriday).innerHTML = txtSexta;
+}
+
+fridayButton('Sexta-Feira');
