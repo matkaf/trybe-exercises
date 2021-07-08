@@ -124,3 +124,13 @@ function taskReceiver (task){
 }
 
 taskReceiver('Exercícios 5.3: ');
+
+// Exercicio 8:
+
+function taskColor (cor){
+  tasksDiv.appendChild(document.createElement('div')).className = 'task';
+  document.querySelector('.task').style.backgroundColor = cor;
+}
+
+taskColor('blue');
+
