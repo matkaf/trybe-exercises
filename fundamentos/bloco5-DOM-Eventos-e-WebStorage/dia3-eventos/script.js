@@ -161,3 +161,33 @@ function dayBackgroundColor () {
 }
 
 dayBackgroundColor();
+
+// Exercicio 11:
+function newTask (){
+  let addInputButton = document.querySelector('#btn-add');
+  let getInputField = document.querySelector('#task-input');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function(){
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Erro: Digite alguma tarefa a ser memorizada');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event){
+    if (event.keyCode === 13 && getInputField.value.length > 0){
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = ' ';
+    } 
+  })
+}
+
+newTask();
