@@ -116,18 +116,11 @@ function dayMouseOut (event){
 
 }
 
+// Exercicio 7:
+let tasksDiv = document.querySelector('.my-tasks');
 
+function taskReceiver (task){
+  tasksDiv.appendChild(document.createElement('span')).innerText = task;  
+}
 
-// for (let index in liDays) {
-//   let liDaysText = liDays[index].innerText;
-//   console.log(liDaysText);
-// }
-// function ZoomInOutDays (){
-//   for (i = 0; i < liDays.length; i += 1) {
-//     if (liDays[i].innerText.style.fontSize != '40px'){
-//       liDays[i].innerText.style.fontSize = '40px';
-//     } else {
-//       liDays[i].innerText.style.fontSize = '20px';
-//     }
-//   }
-// }
+taskReceiver('Exercícios 5.3: ');
