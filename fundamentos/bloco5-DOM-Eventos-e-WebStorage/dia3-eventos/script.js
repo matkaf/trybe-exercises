@@ -107,13 +107,10 @@ liDay.addEventListener('mouseout', dayMouseOut)
 
 function dayMouseOver (event){
   event.target.style.fontSize = '30px';
-  event.target.style.color = 'black'
 };
 
 function dayMouseOut (event){
   event.target.style.fontSize = '';
-  event.target.style.color = '';
-
 }
 
 // Exercicio 7:
@@ -140,9 +137,27 @@ taskColorDiv.addEventListener('click', addClassTask)
 
 function addClassTask (event){
   if (taskColorDiv.className === 'task'){
-    event.target.className = 'task-selected'
+    event.target.className = 'task selected'
   } else {
     event.target.className = 'task'
   }
 }
 
+// Exercicio 10:
+function dayBackgroundColor () {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor){
+      event.target.style.color = taskColor;
+    } else {
+      event.target.style.color = '';
+    }
+  })
+}
+
+dayBackgroundColor();
