@@ -53,7 +53,7 @@ btnFeriado('Feriado');
 
 // Exercicio 3:
 let btnHoliday = document.querySelector('#btn-holiday');
-let holidaysChange = btnHoliday.addEventListener('click', holidaysBackground);
+btnHoliday.addEventListener('click', holidaysBackground);
 
 function holidaysBackground (){
   let holidays = document.querySelectorAll('.holiday');
@@ -62,11 +62,9 @@ function holidaysBackground (){
     if (holidays[index].style.backgroundColor != 'green'){
       holidays[index].style.backgroundColor = 'green';
     } else {
-      holidays[index].style.backgroundColor = '';      
+      holidays[index].style.backgroundColor = '';
     }
-    
   }
-
 }
 
 // Exercicio 4:
@@ -103,17 +101,93 @@ function changeFriday () {
 }
 
 // Exercicio 6:
-let liDays = document.querySelectorAll('.day');
-for (let index in liDays) {
-  let liDaysText = liDays[index].innerText;
-  console.log(liDaysText);
+let liDay = document.querySelector('#days');
+liDay.addEventListener('mouseover', dayMouseOver);
+liDay.addEventListener('mouseout', dayMouseOut)
 
-function ZoomInOutDays (){
-  for (i = 0; i < liDays.length; i += 1) {
-    if (liDays[i].innerText.style.fontSize != '40px'){
-      liDays[i].innerText.style.fontSize = '40px';
-    } else {
-      liDays[i].innerText.style.fontSize = '20px';
-    }
+function dayMouseOver (event){
+  event.target.style.fontSize = '30px';
+};
+
+function dayMouseOut (event){
+  event.target.style.fontSize = '';
+}
+
+// Exercicio 7:
+let tasksDiv = document.querySelector('.my-tasks');
+
+function taskReceiver (task){
+  tasksDiv.appendChild(document.createElement('span')).innerText = task;  
+}
+
+taskReceiver('Exercícios 5.3: ');
+
+// Exercicio 8:
+
+function taskColor (cor){
+  tasksDiv.appendChild(document.createElement('div')).className = 'task';
+  document.querySelector('.task').style.backgroundColor = cor;
+}
+
+taskColor('blue');
+
+// Exercicio 9:
+let taskColorDiv = document.querySelector('.task');
+taskColorDiv.addEventListener('click', addClassTask)
+
+function addClassTask (event){
+  if (taskColorDiv.className === 'task'){
+    event.target.className = 'task selected'
+  } else {
+    event.target.className = 'task'
   }
 }
+
+// Exercicio 10:
+function dayBackgroundColor () {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor){
+      event.target.style.color = taskColor;
+    } else {
+      event.target.style.color = '';
+    }
+  })
+}
+
+dayBackgroundColor();
+
+// Exercicio 11:
+function newTask (){
+  let addInputButton = document.querySelector('#btn-add');
+  let getInputField = document.querySelector('#task-input');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function(){
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Erro: Digite alguma tarefa a ser memorizada');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event){
+    if (event.keyCode === 13 && getInputField.value.length > 0){
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = ' ';
+    } 
+  })
+}
+
+newTask();
