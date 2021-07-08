@@ -134,3 +134,15 @@ function taskColor (cor){
 
 taskColor('blue');
 
+// Exercicio 9:
+let taskColorDiv = document.querySelector('.task');
+taskColorDiv.addEventListener('click', addClassTask)
+
+function addClassTask (event){
+  if (taskColorDiv.className === 'task'){
+    event.target.className = 'task-selected'
+  } else {
+    event.target.className = 'task'
+  }
+}
+
