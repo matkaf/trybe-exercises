@@ -53,7 +53,7 @@ btnFeriado('Feriado');
 
 // Exercicio 3:
 let btnHoliday = document.querySelector('#btn-holiday');
-let holidaysChange = btnHoliday.addEventListener('click', holidaysBackground);
+btnHoliday.addEventListener('click', holidaysBackground);
 
 function holidaysBackground (){
   let holidays = document.querySelectorAll('.holiday');
@@ -62,11 +62,9 @@ function holidaysBackground (){
     if (holidays[index].style.backgroundColor != 'green'){
       holidays[index].style.backgroundColor = 'green';
     } else {
-      holidays[index].style.backgroundColor = '';      
+      holidays[index].style.backgroundColor = '';
     }
-    
   }
-
 }
 
 // Exercicio 4:
@@ -103,17 +101,33 @@ function changeFriday () {
 }
 
 // Exercicio 6:
-let liDays = document.querySelectorAll('.day');
-for (let index in liDays) {
-  let liDaysText = liDays[index].innerText;
-  console.log(liDaysText);
+let liDay = document.querySelector('#days');
+liDay.addEventListener('mouseover', dayMouseOver);
+liDay.addEventListener('mouseout', dayMouseOut)
 
-function ZoomInOutDays (){
-  for (i = 0; i < liDays.length; i += 1) {
-    if (liDays[i].innerText.style.fontSize != '40px'){
-      liDays[i].innerText.style.fontSize = '40px';
-    } else {
-      liDays[i].innerText.style.fontSize = '20px';
-    }
-  }
+function dayMouseOver (event){
+  event.target.style.fontSize = '30px';
+  event.target.style.color = 'black'
+};
+
+function dayMouseOut (event){
+  event.target.style.fontSize = '';
+  event.target.style.color = '';
+
 }
+
+
+
+// for (let index in liDays) {
+//   let liDaysText = liDays[index].innerText;
+//   console.log(liDaysText);
+// }
+// function ZoomInOutDays (){
+//   for (i = 0; i < liDays.length; i += 1) {
+//     if (liDays[i].innerText.style.fontSize != '40px'){
+//       liDays[i].innerText.style.fontSize = '40px';
+//     } else {
+//       liDays[i].innerText.style.fontSize = '20px';
+//     }
+//   }
+// }
