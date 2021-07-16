@@ -47,10 +47,17 @@ let picker = new Pikaday({
 },
 
 });
+function formValidation () {
+  validation.init('#exercise', {
+    events: ["change", "paste", "blur", "keyup"],
+  });
 
+  validation.highlight();
 
+}
 
 window.onload = function () {
   listaEstados();
   picker;
+  formValidation();
 }
