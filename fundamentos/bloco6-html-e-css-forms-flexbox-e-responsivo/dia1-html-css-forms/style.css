@@ -1,0 +1,10 @@
+body {
+  background: #f3f3f3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  padding: 10px;
+}
+
+#last-job {
+  margin-top: 10px;
+}
