@@ -1,0 +1,71 @@
+body {
+  font-size: 20px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+h2 {
+
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 50px 0;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-color: coral;
+    font-size: 1.1em;
+    margin: 5px 40px;
+  }
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    align-self: center;
+    padding-right: 10px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  figure {
+    flex: 0 1 30%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: darkslategray;
+    font-size: 1.3em;
+    margin: auto;
+    text-align: center;
+    max-width: 1024px;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.5em;
+  }
+}
