@@ -36,23 +36,13 @@ const lesson3 = {
 
 // 5 - Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 .
 
-  // Gabarito:
-  const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 }); 
-
-  // Tentativa:
-  // const allLessonsFunction = (lesson1, lesson2, lesson3) => {
-  //   const allLessons = {lesson1 = {}, lesson2 = {}, lesson3 = {}};
-  //   Object.assign(allLessons.lesson1, lesson1);
-  //   Object.assign(allLessons.lesson2, lesson2);
-  //   Object.assign(allLessons.lesson3, lesson3);
-  //   console.log(allLessons)
-  // };
+  const lessons = {};
+  const allLessons = Object.assign(lessons, { lesson1, lesson2, lesson3 });
 
 addTurnolesson2(lesson2, 'turno', 'noite');
 showKeysLesson1(lesson1);
 objectLength(lesson1);
 objectValues(lesson1);
 console.log(allLessons);
-// console.log(lesson1)
-// console.log(lesson2)
-// console.log(lesson3)
+
+
