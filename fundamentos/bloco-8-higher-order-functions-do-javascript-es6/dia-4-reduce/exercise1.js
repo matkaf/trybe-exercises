@@ -9,7 +9,6 @@ const arrays = [
 ];
 
 function flatten() {
-
 // array.concat = retorna um novo array contendo todos os valores passados como parametro.
   return arrays.reduce((acc, curr) => acc.concat(curr)) 
 
