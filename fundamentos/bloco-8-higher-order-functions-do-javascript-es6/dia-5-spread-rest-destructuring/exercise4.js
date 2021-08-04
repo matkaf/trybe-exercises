@@ -32,10 +32,14 @@ const people = [
 
 // escreva filterPeople abaixo
 
+// Com FILTER:
 const filterPeople = () => people.filter((person) => person.nationality === 'Australian' && person.bornIn >= 1900 && person.bornIn < 2000)
 
-const filteredPeople = filterPeople(people);
+// Com Destructuring:
+const filterPeople = (list) => list.filter(({nationality, bornIn}) => nationality === 'Australian' && bornIn > 1900 && bornIn <= 2000);
 
+
+const filteredPeople = filterPeople(people)
 console.log(filteredPeople);
 
 // assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
