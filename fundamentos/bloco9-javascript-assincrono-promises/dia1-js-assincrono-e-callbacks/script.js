@@ -1,35 +1,46 @@
-const myExpenses = [
-  {
-    gym: 99,
-  },
-  {
-    ifood: 200,
-  },
-  {
-    phone: 60,
-  },
-  {
-    internet: 100,
-  },
-];
+const jsonInfo = `{
+  "muitasEmpresasUsam": [
+    "Google",
+    "Twitter",
+    "Facebook",
+    "etc..."
+  ],
+  "temVariasVantagens": [
+    "Legível",
+    "Fácil de usar",
+    "Leve",
+    "Popular",
+    "Versátil"
+  ],
+  "muitasLinguagensDaoSuporte": [
+    "Python",
+    "C",
+    "C++",
+    "Java",
+    "PHP"
+  ]
+}`;
 
-const myIncome = 1000;
+const usoJSONPorque = JSON.parse(jsonInfo);
 
-const monthlyBudget = (myIncome, myExpenses, callback) => {
+const corporationsList = document.getElementById('corporations-used-by');
+const advantagesList = document.getElementById('advantages');
+const languagesList = document.getElementById('languages-used-by');
 
-  const totalExpenses = callback(myExpenses);
-  const totalAfterExpenses = myIncome - totalExpenses;
+usoJSONPorque.muitasEmpresasUsam.map((empresa) => {
+  const newLi = document.createElement('li');
+  newLi.innerText = empresa;
+  corporationsList.appendChild(newLi);
+});
 
-  console.log(`Balanço do mês:
-    Recebido: R$${myIncome},00
-    Gasto: R$${totalExpenses},00
-    Saldo: R$${totalAfterExpenses},00 `);
-};
+usoJSONPorque.temVariasVantagens.map((vantagens) => {
+  const newLi = document.createElement('li');
+  newLi.innerText = vantagens;
+  advantagesList.appendChild(newLi);
+});
 
-const handleExpenses = myExpenses => {
-  const eachValue = myExpenses.map((item) => Object.values(item)[0]);
-  const totalExpense = eachValue.reduce((acc, curr) => acc + curr , 0);
-  return totalExpense;
-};
-
-monthlyBudget(myIncome, myExpenses, handleExpenses);
+usoJSONPorque.muitasLinguagensDaoSuporte.map((linguagens) => {
+  const newLi = document.createElement('li');
+  newLi.innerText = linguagens;
+  languagesList.appendChild(newLi);
+});
