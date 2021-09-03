@@ -2,9 +2,21 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 10px;
+}
+
+.form input {
+  margin-left: 10px;
+}
+
+.form textarea {
+  margin-left: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
