@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+button {
+  width: 300px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 50px;
+  color: white
+}
+
+.btnRed {
+  background-color: red;
+}
+.btnGreen {
+  background-color: green;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
