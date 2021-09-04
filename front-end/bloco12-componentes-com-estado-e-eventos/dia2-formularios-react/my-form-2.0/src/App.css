@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.req1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.req1 input {
+  margin-left: 10px;
+}
+
+.req1 label {
+  margin-bottom: 10px;
+}
