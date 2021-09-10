@@ -2,6 +2,33 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
+  constructor(){
+    super();
+
+    this.handleUppercase = this.handleUppercase.bind(this);
+
+    this.state = {
+      name: '',
+      email: '',
+      cpf: '',
+      address: '',
+      city: '',
+      uf: '',
+      type: '',
+    }
+  }
+
+
+  handleUppercase({ target }) {
+    const { name } = target;
+    let value = target.type === 'checkbox' ? target.checked : target.value;
+    value = value.toUpperCase();
+    
+    this.setState({
+      [name]: value,
+    })
+  }
+
   render() {
 
     return (
@@ -10,7 +37,7 @@ class App extends React.Component {
           <fieldset className="req1">
             <label>
               Nome completo:
-            <input required type="text" name="name" maxLength="40" />
+            <input required type="text" name="name" maxLength="40" value={this.state.name} onChange={this.handleUppercase}/>
             </label>
             <label>
               E-mail:
